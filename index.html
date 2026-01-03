@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroosha Umar - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+    <!-- Theme Switcher Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    </button>
+
+    <!-- Mobile Navigation Toggle -->
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Changed navigation logo from "Aroosha Umar" to "My Portfolio" -->
+            <a href="#home" class="nav-logo">My Portfolio</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#cv" class="nav-link">CV</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Aroosha Umar</h1>
+                    <p class="hero-subtitle">Registration Number: 10-001-2025-00324</p>
+                    <p class="hero-bio">First-year Computer Science student at UET Peshawar, Abbottabad Campus. Passionate about technology, programming, and innovation. Dedicated to learning and creating solutions that make a difference in the digital world.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>Background</h3>
+                    <p>I am a dedicated first-year student pursuing my Bachelor's degree in Computer Science at UET Peshawar, Abbottabad Campus. My educational journey from Pakistan International Public School and Girls College has provided me with a strong foundation in academics and personal growth.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Skills</h3>
+                    <p>HTML, CSS, JavaScript, Python, Problem Solving, Critical Thinking, Team Collaboration, Communication</p>
+                </div>
+                <div class="about-card">
+                    <h3>Interests</h3>
+                    <p>Web Development, Software Engineering, Mobile App Development, Artificial Intelligence, Learning New Technologies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Academic Background</h2>
+            
+            <!-- Table Controls -->
+            <div class="table-controls">
+                <input type="text" id="search-input" placeholder="Search education records..." class="search-input">
+                <select id="level-filter" class="filter-select">
+                    <option value="">All Levels</option>
+                    <option value="Primary">Primary</option>
+                    <option value="Secondary">Secondary</option>
+                    <option value="High School">High School</option>
+                    <option value="University">University</option>
+                </select>
+            </div>
+
+            <!-- Education Table -->
+            <div class="table-wrapper">
+                <table id="education-table" class="education-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="level">Level <span class="sort-indicator">↕</span></th>
+                            <th data-sort="institution">Institution <span class="sort-indicator">↕</span></th>
+                            <th data-sort="year">Year <span class="sort-indicator">↕</span></th>
+                            <th data-sort="grade">Grade/GPA <span class="sort-indicator">↕</span></th>
+                            <th data-sort="achievements">Achievements <span class="sort-indicator">↕</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="education-tbody">
+                        <tr>
+                            <td>Primary</td>
+                            <td>Pakistan International Public School and Girls College</td>
+                            <td>2014-2018</td>
+                            <td>Excellent</td>
+                            <td>Strong Academic Performance</td>
+                        </tr>
+                        <tr>
+                            <td>Secondary</td>
+                            <td>Pakistan International Public School and Girls College</td>
+                            <td>2019-2021</td>
+                            <td>Grade A</td>
+                            <td>Academic Excellence</td>
+                        </tr>
+                        <tr>
+                            <td>High School</td>
+                            <td>Pakistan International Public School and Girls College</td>
+                            <td>2022-2024</td>
+                            <td>A1</td>
+                            <td>Top Performance in Sciences</td>
+                        </tr>
+                        <tr>
+                            <td>University</td>
+                            <td>UET Peshawar, Abbottabad Campus</td>
+                            <td>2025-Present</td>
+                            <td>Currently Pursuing</td>
+                            <td>Bachelor's in Computer Science</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Viewer Section -->
+    <section id="cv" class="section">
+        <div class="container">
+            <h2 class="section-title">My Curriculum Vitae</h2>
+            <div class="cv-controls">
+                <a href="cv.pdf" download="Aroosha_Umar_CV.html" class="btn btn-secondary">View CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Tracker Section (Bonus) -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Project Progress Tracker</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>E-Commerce Website</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="85"></div>
+                    </div>
+                    <p class="progress-text">85% Complete</p>
+                    <p class="project-desc">Full-stack online shopping platform with payment integration</p>
+                </div>
+                <div class="project-card">
+                    <h3>Mobile App Development</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="60"></div>
+                    </div>
+                    <p class="progress-text">60% Complete</p>
+                    <p class="project-desc">React Native application for task management</p>
+                </div>
+                <div class="project-card">
+                    <h3>Machine Learning Model</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="40"></div>
+                    </div>
+                    <p class="progress-text">40% Complete</p>
+                    <p class="project-desc">Image classification system using TensorFlow</p>
+                </div>
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="95"></div>
+                    </div>
+                    <p class="progress-text">95% Complete</p>
+                    <p class="project-desc">Dynamic personal portfolio with advanced features</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Bonus) -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">Project Gallery</h2>
+            <p class="gallery-description">Explore my collection of projects showcasing web development, design, and problem-solving skills.</p>
+            <div class="gallery-grid">
+                <div class="gallery-card" data-index="0">
+                    <div class="gallery-card-image">
+                        <!-- Updated with professional portfolio website mockup image -->
+                        <img src="https://placehold.co/800x600/4F46E5/ffffff?text=Modern+Portfolio+Website+with+Dark+Mode+Toggle+and+Responsive+Navigation" alt="Dynamic portfolio website with responsive design" class="gallery-image">
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3>Personal Portfolio Website</h3>
+                        <p class="gallery-card-category">Web Development</p>
+                        <p class="gallery-card-description">A fully responsive portfolio website featuring theme switcher, dynamic tables, and interactive components built with HTML, CSS, and JavaScript.</p>
+                        <div class="gallery-card-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card" data-index="1">
+                    <div class="gallery-card-image">
+                        <!-- Updated with modern form design mockup -->
+                        <img src="https://placehold.co/800x600/7C3AED/ffffff?text=Contact+Form+with+Real+Time+Validation+and+Success+Messages" alt="Interactive web form with modern UI design" class="gallery-image">
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3>Interactive Contact System</h3>
+                        <p class="gallery-card-category">Frontend Design</p>
+                        <p class="gallery-card-description">Advanced form validation and user interaction system with real-time feedback and smooth animations for enhanced user experience.</p>
+                        <div class="gallery-card-tags">
+                            <span class="tag">Forms</span>
+                            <span class="tag">Validation</span>
+                            <span class="tag">UX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card" data-index="2">
+                    <div class="gallery-card-image">
+                        <!-- Updated with data dashboard mockup -->
+                        <img src="https://placehold.co/800x600/0284C7/ffffff?text=Sortable+Academic+Records+Table+with+Search+and+Filter+Features" alt="Data management dashboard with clean interface" class="gallery-image">
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3>Academic Data Management</h3>
+                        <p class="gallery-card-category">Data Systems</p>
+                        <p class="gallery-card-description">Sortable and filterable data table with search functionality for efficient academic record management and visualization.</p>
+                        <div class="gallery-card-tags">
+                            <span class="tag">Tables</span>
+                            <span class="tag">Search</span>
+                            <span class="tag">Sorting</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card" data-index="3">
+                    <div class="gallery-card-image">
+                        <!-- Updated with theme switcher visual -->
+                        <img src="https://placehold.co/800x600/DB2777/ffffff?text=Dark+Light+Theme+Toggle+with+LocalStorage+Persistence" alt="Theme switcher with dark and light mode" class="gallery-image">
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3>Dynamic Theme System</h3>
+                        <p class="gallery-card-category">UI Feature</p>
+                        <p class="gallery-card-description">Seamless dark and light mode toggle with local storage persistence, ensuring user preferences across sessions.</p>
+                        <div class="gallery-card-tags">
+                            <span class="tag">Themes</span>
+                            <span class="tag">LocalStorage</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card" data-index="4">
+                    <div class="gallery-card-image">
+                        <!-- Updated with progress tracker visualization -->
+                        <img src="https://placehold.co/800x600/059669/ffffff?text=Animated+Progress+Bars+with+Project+Status+Cards+and+Percentages" alt="Progress tracking dashboard with analytics" class="gallery-image">
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3>Project Progress Tracker</h3>
+                        <p class="gallery-card-category">Management Tool</p>
+                        <p class="gallery-card-description">Visual progress tracking system with animated progress bars and real-time status updates for project management.</p>
+                        <div class="gallery-card-tags">
+                            <span class="tag">Analytics</span>
+                            <span class="tag">Animation</span>
+                            <span class="tag">Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card" data-index="5">
+                    <div class="gallery-card-image">
+                        <!-- Updated with responsive design visualization -->
+                        <img src="https://placehold.co/800x600/D97706/ffffff?text=Mobile+First+Responsive+Design+with+Flexible+Grid+Layout" alt="Responsive mobile design with adaptive layout" class="gallery-image">
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3>Responsive Design System</h3>
+                        <p class="gallery-card-category">Mobile Development</p>
+                        <p class="gallery-card-description">Mobile-first responsive design approach ensuring optimal viewing experience across all devices and screen sizes.</p>
+                        <div class="gallery-card-tags">
+                            <span class="tag">Responsive</span>
+                            <span class="tag">Mobile</span>
+                            <span class="tag">Flexbox</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">&#10094;</button>
+        <button class="lightbox-next">&#10095;</button>
+        <div class="lightbox-content">
+            <img src="/placeholder.svg" alt="" class="lightbox-image">
+            <div class="lightbox-details">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> arooshaawan159@outlook.com</p>
+                    <p><strong>Phone:</strong> +92 311 3262983</p>
+                    <p><strong>Location:</strong> UET Peshawar, Abbottabad Campus</p>
+                    <div class="social-links">
+                        
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div id="form-success" class="success-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aroosha Umar. All rights reserved.</p>
+            <p>Built with HTML, CSS, and JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
